@@ -1,11 +1,12 @@
-# cs224n
+# [CS224n: Natural Language Processing with Deep Learning](http://web.stanford.edu/class/cs224n/)
+
 
 ## Introduction and Word Vectors 
-- [ ] video 
-- [ ] slide
+- [x] video 
+- [x] slide
 - [ ] notes
 - [ ] Gensim word vectors example
-- [ ] Assignment 1
+- [x] Assignment 1
 - Suggested Readings
     - [ ] Word2Vec Tutorial - The Skip-Gram Model
     - [ ] Efficient Estimation of Word Representations in Vector Space
@@ -14,8 +15,8 @@
 
 
 ## Word Vectors 2 and Word Senses
-- [ ] video 
-- [ ] slide
+- [x] video 
+- [x] slide
 - [ ] notes
 - Suggested Readings
     - [ ] GloVe: Global Vectors for Word Representation
