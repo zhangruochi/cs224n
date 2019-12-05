@@ -4,20 +4,20 @@
 ## Introduction and Word Vectors 
 - [x] video 
 - [x] slide
-- [ ] notes
-- [ ] Gensim word vectors example
+- [x] notes
+- [x] Gensim word vectors example
 - [x] Assignment 1
 - Suggested Readings
-    - [ ] Word2Vec Tutorial - The Skip-Gram Model
+    - [x] Word2Vec Tutorial - The Skip-Gram Model
     - [ ] Efficient Estimation of Word Representations in Vector Space
     - [ ] Distributed Representations of Words and Phrases and their Compositionality 
-- [ ] Summary
+- [x] Summary
 
 
 ## Word Vectors 2 and Word Senses
 - [x] video 
 - [x] slide
-- [ ] notes
+- [x] notes
 - Suggested Readings
     - [ ] GloVe: Global Vectors for Word Representation
     - [ ] Improving Distributional Similarity with Lessons Learned from Word Embeddings
@@ -25,7 +25,18 @@
     - [ ] A Latent Variable Model Approach to PMI-based Word Embeddings
     - [ ] Linear Algebraic Structure of Word Senses, with Applications to Polysemy
     - [ ] On the Dimensionality of Word Embedding.
-- [ ] Summary
+- [x] Summary
 
 ## Python review session 
-- [ ]slide
+- [x]slide
+
+## Word Window Classification, Neural Networks, and Matrix Calculus 
+- [ ] video 
+- [ ] slide
+- [ ] notes
+- [ ] Assignment 2
+- Suggested Readings
+    - [ ] CS231n notes on backprop
+    - [ ] Efficient Estimation of Word Representations in Vector Space
+    - [ ] Distributed Representations of Words and Phrases and their Compositionality 
+- [x] Summary
