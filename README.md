@@ -28,10 +28,10 @@
 - [x] Summary
 
 ## Python review session 
-- [x]slide
+- [x] slide
 
 ## Word Window Classification, Neural Networks, and Matrix Calculus 
-- [ ] video 
+- [x] video 
 - [ ] slide
 - [ ] notes
 - [ ] Assignment 2
@@ -39,4 +39,4 @@
     - [ ] CS231n notes on backprop
     - [ ] Efficient Estimation of Word Representations in Vector Space
     - [ ] Distributed Representations of Words and Phrases and their Compositionality 
-- [x] Summary
+- [] Summary
