@@ -24,7 +24,7 @@
     - [ ] A Latent Variable Model Approach to PMI-based Word Embeddings
     - [ ] Linear Algebraic Structure of Word Senses, with Applications to Polysemy
     - [ ] On the Dimensionality of Word Embedding.
-- [x] [review](https://zhangruochi.com/Word-Vectors/2019/12/04/)
+- [x] [Review](https://zhangruochi.com/Word-Vectors/2019/12/04/)
 
 ## Python review session 
 - [x] slide
@@ -49,4 +49,16 @@
     - [ ] Learning Representations by Backpropagating Errors
     - [x] Derivatives, Backpropagation, and Vectorization
     - [x] Yes you should understand backprop
-- [x] [review](https://zhangruochi.com/Computational-Graph/2019/12/06/)
+- [x] [Review](https://zhangruochi.com/Computational-Graph/2019/12/06/)
+
+## Linguistic Structure: Dependency Parsing 
+- [ ] video 
+- [ ] slide
+- [ ] notes
+- Suggested Readings
+    - [ ] Incrementality in Deterministic Dependency Parsing
+    - [ ] A Fast and Accurate Dependency Parser using Neural Networks Dependency Parsing
+    - [ ] Globally Normalized Transition-Based Neural Networks
+    - [ ] Universal Stanford Dependencies: A cross-linguistic typology
+    - [ ] Universal Dependencies website
+- [ ] Review
