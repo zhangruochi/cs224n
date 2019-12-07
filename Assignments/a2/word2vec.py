@@ -17,7 +17,7 @@ def sigmoid(x):
     """
 
     ### YOUR CODE HERE
-
+    s = 1./(1. + np.exp(-x))
     ### END YOUR CODE
 
     return s
@@ -57,7 +57,28 @@ def naiveSoftmaxLossAndGradient(
     ### Please use the provided softmax function (imported earlier in this file)
     ### This numerically stable implementation helps you avoid issues pertaining
     ### to integer overflow. 
+    
+    # centerWordVec:  (embedding_dim,1)
+    # outsideVectors: (vocab_size,embedding_dim)
 
+    scores = np.matmul(outsideVectors, centerWordVec)   # (vocab_size,1)
+
+    # print(scores.shape)
+
+
+    probs = softmax(scores)                          # (vocab_size,1)  y_hat
+
+    loss = -np.log(probs[outsideWordIdx])
+
+    dscores = probs.copy()   # (vocab_size,1)
+    dscores[outsideWordIdx] = dscores[outsideWordIdx] - 1   #  y_hat minus y
+    gradCenterVec = np.matmul(outsideVectors.T, dscores)  # (embedding_dim,1)
+
+    # print(dscores.shape) # (5,)
+    # print(centerWordVec.shape) # (3,)
+    # exit()
+
+    gradOutsideVecs = np.outer(dscores, centerWordVec) # (vocab_size,embedding_dim)
 
     ### END YOUR CODE
 
@@ -105,8 +126,23 @@ def negSamplingLossAndGradient(
     ### YOUR CODE HERE
 
     ### Please use your implementation of sigmoid in here.
+    gradCenterVec   = np.zeros(centerWordVec.shape)
+    gradOutsideVecs = np.zeros(outsideVectors.shape)
+    loss = 0.0
 
+    u_o = outsideVectors[outsideWordIdx]
+    z = sigmoid(np.dot(u_o,centerWordVec))
+    loss -= np.log(z)
+    gradCenterVec += u_o*(z-1)
+    gradOutsideVecs[outsideWordIdx] = centerWordVec*(z-1)
 
+    for i in range(K):
+        neg_id = indices[i+1]
+        u_k = outsideVectors[neg_id]
+        z = sigmoid(-np.dot(u_k,centerWordVec))
+        loss -= np.log(z)
+        gradCenterVec += u_k*(1-z)
+        gradOutsideVecs[neg_id] += centerWordVec*(1-z)
     ### END YOUR CODE
 
     return loss, gradCenterVec, gradOutsideVecs
@@ -148,7 +184,18 @@ def skipgram(currentCenterWord, windowSize, outsideWords, word2Ind,
     gradOutsideVectors = np.zeros(outsideVectors.shape)
 
     ### YOUR CODE HERE
-
+    center_id = word2Ind[currentCenterWord]
+    centerWordVec = centerWordVectors[center_id]
+    for word in outsideWords:
+        outside_id = word2Ind[word]
+        loss_mini, gradCenter_mini, gradOutside_mini= \
+        word2vecLossAndGradient(centerWordVec=centerWordVec,
+            outsideWordIdx=outside_id,outsideVectors=outsideVectors,dataset=dataset)
+        loss += loss_mini
+        # print(gradCenterVecs[center_id].shape, gradCenter_mini.shape)
+        # exit()
+        gradCenterVecs[center_id] += gradCenter_mini
+        gradOutsideVectors += gradOutside_mini
     ### END YOUR CODE
 
     return loss, gradCenterVecs, gradOutsideVectors

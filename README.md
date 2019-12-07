@@ -33,7 +33,7 @@
 - [x] video 
 - [x] slide
 - [x] notes
-- [ ] Assignment 2
+- [x] Assignment 2
 - Suggested Readings
     - [x] CS231n notes on backprop
     - [ ] Efficient Estimation of Word Representations in Vector Space
