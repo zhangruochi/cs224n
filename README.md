@@ -11,7 +11,6 @@
     - [x] Word2Vec Tutorial - The Skip-Gram Model
     - [ ] Efficient Estimation of Word Representations in Vector Space
     - [ ] Distributed Representations of Words and Phrases and their Compositionality 
-- [x] Summary
 
 
 ## Word Vectors 2 and Word Senses
@@ -25,18 +24,29 @@
     - [ ] A Latent Variable Model Approach to PMI-based Word Embeddings
     - [ ] Linear Algebraic Structure of Word Senses, with Applications to Polysemy
     - [ ] On the Dimensionality of Word Embedding.
-- [x] Summary
+- [x] [review](https://zhangruochi.com/Word-Vectors/2019/12/04/)
 
 ## Python review session 
 - [x] slide
 
 ## Word Window Classification, Neural Networks, and Matrix Calculus 
 - [x] video 
-- [ ] slide
-- [ ] notes
+- [x] slide
+- [x] notes
 - [ ] Assignment 2
 - Suggested Readings
-    - [ ] CS231n notes on backprop
+    - [x] CS231n notes on backprop
     - [ ] Efficient Estimation of Word Representations in Vector Space
     - [ ] Distributed Representations of Words and Phrases and their Compositionality 
-- [] Summary
+
+
+## Backpropagation and Computation Graphs 
+- [x] video 
+- [x] slide
+- [x] notes
+- Suggested Readings
+    - [x] CS231n notes on network architectures
+    - [ ] Learning Representations by Backpropagating Errors
+    - [x] Derivatives, Backpropagation, and Vectorization
+    - [x] Yes you should understand backprop
+- [x] [review](https://zhangruochi.com/Computational-Graph/2019/12/06/)
