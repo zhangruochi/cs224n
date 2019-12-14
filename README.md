@@ -66,26 +66,26 @@
 
 
 ## Recurrent Neural Networks and Language Models 
-- [ ] video 
-- [ ] slide
+- [x] video 
+- [x] slide
 - [ ] notes
 - Suggested Readings
-    - N-gram Language Models (textbook chapter)
-    - The Unreasonable Effectiveness of Recurrent Neural Networks (blog post overview)
-    - Sequence Modeling: Recurrent and Recursive Neural Nets (Sections 10.1 and 10.2)
-    - On Chomsky and the Two Cultures of Statistical Learning
+    - [ ] N-gram Language Models (textbook chapter)
+    - [ ] The Unreasonable Effectiveness of Recurrent Neural Networks (blog post overview)
+    - [ ] Sequence Modeling: Recurrent and Recursive Neural Nets (Sections 10.1 and 10.2)
+    - [ ] On Chomsky and the Two Cultures of Statistical Learning
 
 
 ## Vanishing Gradients and Fancy RNNs  
-- [ ] video 
-- [ ] slide
-- [ ] notes
+- [x] video 
+- [x] slide
+- [x] notes
 - Suggested Readings
-    - Sequence Modeling: Recurrent and Recursive Neural Nets (Sections 10.3, 10.5, 10.7-10.12)
-    - Learning long-term dependencies with gradient descent is difficult (one of the original vanishing gradient papers)
-    - On the difficulty of training Recurrent Neural Networks (proof of vanishing gradient problem)
-    - Vanishing Gradients Jupyter Notebook (demo for feedforward networks)
-    - Understanding LSTM Networks (blog post overview)
+    - [ ] Sequence Modeling: Recurrent and Recursive Neural Nets (Sections 10.3, 10.5, 10.7-10.12)
+    - [ ] Learning long-term dependencies with gradient descent is difficult (one of the original vanishing gradient papers)
+    - [ ] On the difficulty of training Recurrent Neural Networks (proof of vanishing gradient problem)
+    - [ ] Vanishing Gradients Jupyter Notebook (demo for feedforward networks)
+    - [ ] Understanding LSTM Networks (blog post overview)
 
 
     
