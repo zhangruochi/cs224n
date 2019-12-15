@@ -88,4 +88,28 @@
     - [ ] Understanding LSTM Networks (blog post overview)
 
 
+## Machine Translation, Seq2Seq and Attention 
+- [x] video 
+- [x] slide
+- [x] notes
+- Suggested Readings
+    - [ ] Statistical Machine Translation slides, CS224n 2015 (lectures 2/3/4)
+    - [ ] Statistical Machine Translation (book by Philipp Koehn)
+    - [ ] BLEU (original paper)
+    - [ ] Sequence to Sequence Learning with Neural Networks (original seq2seq NMT paper)
+    - [ ] Sequence Transduction with Recurrent Neural Networks (early seq2seq speech recognition paper)
+    - [ ] Neural Machine Translation by Jointly Learning to Align and Translate (original seq2seq+attention paper)
+    - [ ] Attention and Augmented Recurrent Neural Networks (blog post overview)
+    - [ ] Massive Exploration of Neural Machine Translation Architectures (practical advice for hyperparameter choices)
+    
+## Practical Tips for Final Projects 
+- [x] video 
+- [x] slide
+- [x] notes
+
+
+## Question Answering and the Default Final Projects
+- [x] video 
+- [x] slide
+- [x] notes
     
