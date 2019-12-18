@@ -140,8 +140,8 @@
 - [ ] video 
 - [ ] slide
 - Suggested Readings
-    -[ ] Attention is all you need
-    -[ ] Image Transformer
-    -[ ] Music Transformer: Generating music with long-term structure
+    - [ ] Attention is all you need
+    - [ ] Image Transformer
+    - [ ] Music Transformer: Generating music with long-term structure
 - [ ] Assignment 5
     
