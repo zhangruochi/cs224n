@@ -75,7 +75,6 @@
     - [ ] Sequence Modeling: Recurrent and Recursive Neural Nets (Sections 10.1 and 10.2)
     - [ ] On Chomsky and the Two Cultures of Statistical Learning
 
-
 ## Vanishing Gradients and Fancy RNNs  
 - [x] video 
 - [x] slide
@@ -86,12 +85,13 @@
     - [ ] On the difficulty of training Recurrent Neural Networks (proof of vanishing gradient problem)
     - [ ] Vanishing Gradients Jupyter Notebook (demo for feedforward networks)
     - [ ] Understanding LSTM Networks (blog post overview)
-
+- [x] [Review](https://zhangruochi.com/Gated-RNN-Units/2019/12/15/)
 
 ## Machine Translation, Seq2Seq and Attention 
 - [x] video 
 - [x] slide
 - [x] notes
+- [x] Assignment 4
 - Suggested Readings
     - [ ] Statistical Machine Translation slides, CS224n 2015 (lectures 2/3/4)
     - [ ] Statistical Machine Translation (book by Philipp Koehn)
@@ -101,15 +101,47 @@
     - [ ] Neural Machine Translation by Jointly Learning to Align and Translate (original seq2seq+attention paper)
     - [ ] Attention and Augmented Recurrent Neural Networks (blog post overview)
     - [ ] Massive Exploration of Neural Machine Translation Architectures (practical advice for hyperparameter choices)
+- [x] [Review](https://zhangruochi.com/Attention/2019/12/16/)
     
 ## Practical Tips for Final Projects 
-- [x] video 
-- [x] slide
-- [x] notes
+- [ ] video 
+- [ ] slide
+- [ ] notes
 
 
 ## Question Answering and the Default Final Projects
-- [x] video 
-- [x] slide
-- [x] notes
+- [ ] video 
+- [ ] slide
+- [ ] notes
+
+## ConvNets for NLP
+- [ ] video 
+- [ ] slide
+- [ ] notes
+- Suggested Readings
+    - [ ] Convolutional Neural Networks for Sentence Classification
+    - [ ] A Convolutional Neural Network for Modelling Sentences
+
+
+## Information from parts of words: Subword Models 
+- [ ] video 
+- [ ] slide
+- Suggested Readings
+    - [ ] Minh-Thang Luong and Christopher Manning. Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models
+
+## Modeling contexts of use: Contextual Representations and Pretraining 
+- [ ] video 
+- [ ] slide
+- Suggested Readings
+    - [ ] Smith, Noah A. Contextual Word Representations: A Contextual Introduction. (Published just in time for this lecture!)
+    - [ ] The Illustrated BERT, ELMo, and co.
+
+## Transformers and Self-Attention For Generative Models 
+- [ ] video 
+- [ ] slide
+- Suggested Readings
+    -[ ] Attention is all you need
+    -[ ] Image Transformer
+    -[ ] Music Transformer: Generating music with long-term structure
+- [ ] Assignment 5
     
