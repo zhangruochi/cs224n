@@ -115,17 +115,18 @@
 - [ ] notes
 
 ## ConvNets for NLP
-- [ ] video 
-- [ ] slide
-- [ ] notes
+- [x] video 
+- [x] slide
+- [x] notes
 - Suggested Readings
     - [ ] Convolutional Neural Networks for Sentence Classification
     - [ ] A Convolutional Neural Network for Modelling Sentences
 
 
 ## Information from parts of words: Subword Models 
-- [ ] video 
-- [ ] slide
+- [x] video 
+- [x] slide
+- [ ] Assignment 5
 - Suggested Readings
     - [ ] Minh-Thang Luong and Christopher Manning. Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models
 
@@ -143,5 +144,5 @@
     - [ ] Attention is all you need
     - [ ] Image Transformer
     - [ ] Music Transformer: Generating music with long-term structure
-- [ ] Assignment 5
+
     

@@ -40,7 +40,19 @@ def pad_sents_char(sents, char_pad_token):
     ###
     ###     You should NOT use the method `pad_sents()` below because of the way it handles
     ###     padding and unknown words.
-
+    sents_padded = []
+    max_sent_len = max([len(sent) for sent in sents])
+    for sent in sents:
+        sent = sent + [[] for i in range(max_sent_len - len(sent))]
+        assert len(sent) == max_sent_len
+        tmp_sent = []
+        for word in sent:
+            word = word[:max_word_length]
+            diff = max_word_length - len(word)
+            word = word + [char_pad_token] * diff
+            assert len(word) == max_word_length
+            tmp_sent.append(word)
+        sents_padded.append(tmp_sent)
 
     ### END YOUR CODE
 
@@ -49,20 +61,21 @@ def pad_sents_char(sents, char_pad_token):
 
 def pad_sents(sents, pad_token):
     """ Pad list of sentences according to the longest sentence in the batch.
-    @param sents (list[list[int]]): list of sentences, where each sentence
+    @param sents (list[list[str]]): list of sentences, where each sentence
                                     is represented as a list of words
-    @param pad_token (int): padding token
-    @returns sents_padded (list[list[int]]): list of sentences where sentences shorter
+    @param pad_token (str): padding token
+    @returns sents_padded (list[list[str]]): list of sentences where sentences shorter
         than the max length sentence are padded out with the pad_token, such that
         each sentences in the batch now has equal length.
-        Output shape: (batch_size, max_sentence_length)
     """
     sents_padded = []
 
-    ### COPY OVER YOUR CODE FROM ASSIGNMENT 4
+    ### YOUR CODE HERE (~6 Lines)
+    max_sentence_len = max([len(s) for s in sents])
+    for sent in sents:
+        sents_padded.append(sent + [pad_token] * (max_sentence_len - len(sent)))
 
-
-    ### END YOUR CODE FROM ASSIGNMENT 4
+    ### END YOUR CODE
 
     return sents_padded
 

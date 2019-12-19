@@ -28,6 +28,19 @@ class CharDecoder(nn.Module):
         ###       - Set the padding_idx argument of the embedding matrix.
         ###       - Create a new Embedding layer. Do not reuse embeddings created in Part 1 of this assignment.
         
+        super(CharDecoder, self).__init__()
+
+        self.char_embedding_size = char_embedding_size
+        self.target_vocab = target_vocab
+        self.padding_idx = self.target_vocab.char2id['<pad>']
+        self.decoderCharEmb = nn.Embedding(len(self.target_vocab.char2id),
+                                           char_embedding_size,
+                                           self.padding_idx)
+        self.charDecoder = nn.LSTM(input_size=char_embedding_size,
+                                   hidden_size=hidden_size)
+        self.char_output_projection = nn.Linear(hidden_size,
+                                                len(self.target_vocab.char2id))
+
 
         ### END YOUR CODE
 
@@ -44,7 +57,14 @@ class CharDecoder(nn.Module):
         """
         ### YOUR CODE HERE for part 2b
         ### TODO - Implement the forward pass of the character decoder.
-        
+        char_embeddings = self.decoderCharEmb(input)        # (length, batch, char_embed_size)
+        hidden_states, dec_hidden = self.charDecoder(
+            char_embeddings, dec_hidden)    # (length, batch, hidden_size)
+        scores = self.char_output_projection(hidden_states)     # (len, batch, vocab)
+
+        return scores, dec_hidden
+        ### END YOUR CODE
+
         
         ### END YOUR CODE 
 
@@ -62,7 +82,16 @@ class CharDecoder(nn.Module):
         ###
         ### Hint: - Make sure padding characters do not contribute to the cross-entropy loss.
         ###       - char_sequence corresponds to the sequence x_1 ... x_{n+1} from the handout (e.g., <START>,m,u,s,i,c,<END>).
+        scores, dec_hidden = self.forward(char_sequence[:-1], dec_hidden)
+        # char_embeddings = self.decoderCharEmb(char_sequence)
+        # hidden_states, dec_hidden = self.charDecoder(char_embeddings[:-1], dec_hidden)
+        # scores = self.char_output_projection(hidden_states)  # (len, batch, vocab)
+        loss = nn.CrossEntropyLoss(ignore_index=self.padding_idx,
+                                   reduction='sum')
+        ce_loss = loss(scores.permute(1, 2, 0),
+                       char_sequence[1:].transpose(1, 0))
 
+        return ce_loss
 
         ### END YOUR CODE
 
@@ -87,3 +116,29 @@ class CharDecoder(nn.Module):
         
         ### END YOUR CODE
 
+        output_words = []
+        decodedWords = []
+        start_idx = self.target_vocab.start_of_word
+        end_idx = self.target_vocab.end_of_word
+        dec_hidden = initialStates
+        batch_size = dec_hidden[0].shape[1]
+        current_char = torch.tensor([[start_idx] * batch_size],
+                                    device=device)  # idx of '<start>' token
+
+        for _ in range(max_length):
+            scores, dec_hidden = self.forward(current_char, dec_hidden)
+            current_char = scores.argmax(-1)
+            output_words += [current_char]
+
+
+        output_words = torch.cat(output_words).t().tolist()
+        for foo in output_words:
+            word = ""
+            for bar in foo:
+                if bar == end_idx:
+                    break
+                word += self.target_vocab.id2char[bar]
+            decodedWords += [word]
+
+        return decodedWords
+        ### END YOUR CODE

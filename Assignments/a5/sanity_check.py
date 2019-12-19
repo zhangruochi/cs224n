@@ -8,6 +8,8 @@ Usage:
     sanity_check.py 1e
     sanity_check.py 1f
     sanity_check.py 1j
+    sanity_check.py 1h
+    sanity_check.py 1i
     sanity_check.py 2a
     sanity_check.py 2b
     sanity_check.py 2c
@@ -29,6 +31,9 @@ from vocab import Vocab, VocabEntry
 
 from char_decoder import CharDecoder
 from nmt_model import NMT
+
+from highway import Highway
+from cnn import CNN
 
 
 import torch
@@ -95,6 +100,47 @@ def question_1f_sanity_check():
     print("Sanity Check Passed for Question 1f: Padding!")
     print("-"*80)
 
+
+def question_1h_sanity_check():
+    """ Sanity check for highway.py
+        basic shape check
+    """
+
+    print("-" * 80)
+    print("Running Sanity Check for Question 1h: Highway")
+    print("-" * 80)
+
+    X_conv_out = torch.randn((5, 4, 3))
+    highway = Highway(X_conv_out.size(-1))
+    X_highway = highway(X_conv_out)
+    assert X_conv_out.size() == X_highway.size(
+    ), "Output size should be: {}\n but is {}\n".format(X_conv_out.size(), X_highway.size())
+
+    print("Shape is right!")
+    print("-" * 80)
+
+
+def question_1i_sanity_check():
+    """ Sanity check for cnn.py
+        basic shape check
+    """
+
+    print("-" * 80)
+    print("Running Sanity Check for Question 1i: CNN")
+    print("-" * 80)
+
+    max_word_len = 21
+    batch_size = 10
+    embed_size = 50
+    x_reshape = torch.randn((batch_size,embed_size,max_word_len))
+    cnn = CNN()
+    X_cnn = cnn(x_reshape)
+    # print(X_cnn.size())
+    assert x_reshape.size()[:1] == X_cnn.size(
+    )[:1], "Output size should be: {}\n but is {}\n".format(X_conv_out.size(), X_highway.size())
+
+    print("Shape is right!")
+    print("-" * 80)
 
 def question_1j_sanity_check(model):
 	""" Sanity check for model_embeddings.py 
@@ -184,7 +230,7 @@ def main():
 
     # Check Python & PyTorch Versions
     assert (sys.version_info >= (3, 5)), "Please update your installation of Python to version >= 3.5"
-    assert(torch.__version__ == "1.0.0"), "Please update your installation of PyTorch. You have {} and you should have version 1.0.0".format(torch.__version__)
+    # assert(torch.__version__ == "1.0.0"), "Please update your installation of PyTorch. You have {} and you should have version 1.0.0".format(torch.__version__)
 
     # Seed the Random Number Generators
     seed = 1234
@@ -213,6 +259,10 @@ def main():
         question_1e_sanity_check()
     elif args['1f']:
         question_1f_sanity_check()
+    elif args['1h']:
+        question_1h_sanity_check()
+    elif args['1i']:
+        question_1i_sanity_check()
     elif args['1j']:
         question_1j_sanity_check(model)
     elif args['2a']:
