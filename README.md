@@ -126,23 +126,54 @@
 ## Information from parts of words: Subword Models 
 - [x] video 
 - [x] slide
-- [ ] Assignment 5
+- [x] Assignment 5
 - Suggested Readings
     - [ ] Minh-Thang Luong and Christopher Manning. Achieving Open Vocabulary Neural Machine Translation with Hybrid Word-Character Models
 
 ## Modeling contexts of use: Contextual Representations and Pretraining 
-- [ ] video 
-- [ ] slide
+- [x] video 
+- [x] slide
 - Suggested Readings
     - [ ] Smith, Noah A. Contextual Word Representations: A Contextual Introduction. (Published just in time for this lecture!)
     - [ ] The Illustrated BERT, ELMo, and co.
 
 ## Transformers and Self-Attention For Generative Models 
-- [ ] video 
-- [ ] slide
+- [x] video 
+- [x] slide
 - Suggested Readings
     - [ ] Attention is all you need
     - [ ] Image Transformer
     - [ ] Music Transformer: Generating music with long-term structure
 
-    
+## Natural Language Generation
+- [ ] video 
+- [ ] slide
+
+## Reference in Language and Coreference Resolution 
+- [ ] video 
+- [ ] slide
+
+## Multitask Learning: A general model for NLP? 
+- [ ] video 
+- [ ] slide
+
+## Constituency Parsing and Tree Recursive Neural Networks 
+- [ ] video 
+- [ ] slide
+- [ ] notes
+- Suggested Readings:
+    - [ ] Parsing with Compositional Vector Grammars.
+    - [ ] Constituency Parsing with a Self-Attentive Encoder
+
+## Safety, Bias, and Fairness
+- [ ] video 
+- [ ] slide
+
+
+## Future of NLP + Deep Learning 
+- [ ] video 
+- [ ] slide
+
+
+
+

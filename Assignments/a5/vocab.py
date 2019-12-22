@@ -168,7 +168,7 @@ class VocabEntry(object):
         ### TODO: 
         ###     Connect `words2charindices()` and `pad_sents_char()` which you've defined in 
         ###     previous parts
-        char_sents =  self.words2indices(sents)
+        char_sents =  self.words2charindices(sents)
         padded_char_sents = pad_sents_char(char_sents, 0)
 
         sents_var = torch.tensor(padded_char_sents, dtype=torch.int8, device= device)
